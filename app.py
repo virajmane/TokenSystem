@@ -29,7 +29,7 @@ def index():
         password = random.randint(1000, 9999)
         data[abbr] = {"currentToken":0, "tokens":{},"initialTime":0 ,"estTime":0, "password":password}
         write_data(data)
-        return render_template("urldisplay.html", user_url=f"https://tokn.virajman3.repl.co/{abbr}", admin_url=f"https://tokn.virajman3.repl.co/{abbr}/admin?password={password}")
+        return render_template("urldisplay.html", user_url=f"https://tokensys.herokuapp.com/{abbr}", admin_url=f"https://tokensys.herokuapp.com/{abbr}/admin?password={password}")
     return render_template("index.html")
 
 @app.route("/<string:abbr>/", methods=["GET", "POST"])
