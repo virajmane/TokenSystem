@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="plagiarism remover, text replacer, alternative words finder" />
+      <meta name="description" content="Plagiarism Remover will replace & rephrase the sentence. Just provide paragraph as an input." />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <title>Token System</title>
+  <style>
+      .counter
+{
+    background-color: #eaecf0;
+    text-align: center;
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.counter-count
+{
+    font-size: 20px;
+    background-color: #00b3e7;
+    border-radius: 60%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
+}
+  </style>
+    <style>
+        .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+    </style>
+   </head>
+   <body>
+<div class="card text-center">
+<div class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <p class="counter-count">{{current_token}}</p>
+                    <p class="employee-p">Current Token</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="customer">
+                    <p class="counter-count">{{my_token}}</p>
+                    <p class="customer-p">My Token</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="design">
+                    <p class="counter-count">{{estTime}}min</p>
+                    <p class="design-p">Estimated Time</p>
+                </div>
+            </div>
+            <p><em>Please note that the estimated time is calculated based on the average of entry time between two tokens starting after 2nd token number with respect to the number of tokens preciding.</em></p>
+        </div>
+    </div>
+{% if message!="" %}
+<div class="alert alert-success" role="alert" style="top-margin: 20px">
+  {{message}}
+</div>
+{% endif %}
+</div>
+</div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   </body>
+</html>

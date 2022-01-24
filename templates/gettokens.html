@@ -1,0 +1,58 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="plagiarism remover, text replacer, alternative words finder" />
+      <meta name="description" content="Plagiarism Remover will replace & rephrase the sentence. Just provide paragraph as an input." />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <title>Token System</title>
+    <style>
+        .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+    </style>
+   </head>
+   <body>
+<div class="card text-center">
+<div class="card border mb-3" style="max-width: 25rem;">
+  <div class="card-body text">
+    <h5 class="card-title">Get Token</h5>
+    <p class="card-text">Total Tokens: {{total_tokens}}</p>
+    <p><em>Please scan the below QR code to get token or use button below</em></p>
+    <img src="https://image-charts.com/chart?chs=150x150&amp;cht=qr&amp;chl=https://tokn.virajman3.repl.co/{{abbr}}/gettoken" alt="https://tokn.virajman3.repl.co/{{abbr}}/gettoken">
+        <form method="post">
+                <input class="btn btn-primary" type="submit" value="Get Token"/>
+        </form>
+  </div>
+</div>
+</div>
+    <script>
+function myFunction(url) {
+  var copyText = document.getElementById(url);
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   </body>
+</html>
